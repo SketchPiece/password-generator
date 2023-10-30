@@ -7,7 +7,7 @@ interface CopyIconProps extends ComponentProps<'svg'> {
 
 const CopyIcon: FC<CopyIconProps> = ({
   color = '#4d4d4d',
-  size = 32,
+  size = 28,
   ...rest
 }) => {
   return (
