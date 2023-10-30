@@ -1,0 +1,20 @@
+.clipboardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: $black-400;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  &__field {
+    border: none;
+    background: transparent;
+    width: 100%;
+    color: $black-800;
+  }
+  &__icon {
+    color: $black-800;
+    cursor: pointer;
+  }
+}

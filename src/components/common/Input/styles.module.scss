@@ -1,0 +1,24 @@
+.input {
+  font-size: x-large;
+
+  &__label {
+    color: white;
+  }
+  &__wrapper {
+    font-size: x-large;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    &--column {
+      flex-direction: column-reverse;
+    }
+    &--row {
+      gap: 0.5rem;
+    }
+    &--small {
+      width: 6rem;
+      font-size: 0.75rem;
+    }
+  }
+}

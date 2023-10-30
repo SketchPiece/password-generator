@@ -1,0 +1,33 @@
+.passwordGenerator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100rem;
+  width: 100%;
+  background-color: $black-600;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px 0px black;
+  padding: 1rem;
+
+  &__settings {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__resultWrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
