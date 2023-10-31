@@ -57,7 +57,7 @@ const PasswordGenerator: FC<PasswordGeneratorProps> = () => {
           <Input
             key={el}
             {...register(`include${el}`)}
-            style={{width:'1.5rem', height:'1.5rem'}}
+            style={{ width: '1.5rem', height: '1.5rem' }}
             type="checkbox"
             label={`Include ${el}`}
           />
@@ -65,10 +65,10 @@ const PasswordGenerator: FC<PasswordGeneratorProps> = () => {
       </div>
       <div className={styles.passwordGeneratorFooter}>
         <Button disabled={!isValid}>
-          {!password ? 'Generate' : 'Regenerate'}!
+          {!password ? 'Generate' : 'Regenerate'}
         </Button>
         {password && (
-          <Button color="red" onClick={reset}>
+          <Button color="secondary" onClick={reset}>
             Clear
           </Button>
         )}

@@ -4,26 +4,23 @@ import CopyIcon from 'assets/icons/copy'
 import toast from 'react-hot-toast'
 
 interface ClipboardFieldProps {
-  value: string
+  value?: string
+  onCopy?: () => void
 }
 
 const ClipboardField: FC<ClipboardFieldProps> = ({ value }) => {
   const copyToClipoard = async () => {
     if (!navigator.clipboard) {
       toast.error('Clipboard API not supported.')
-      return
     }
-    await navigator.clipboard.writeText(value)
-    toast.success('Copied to clipboard!')
+    await navigator.clipboard.writeText(value || '')
+    toast.success('Copied to clipboard')
   }
 
   return (
     <div className={styles.clipboardWrapper}>
-      <span className={styles.clipboardWrapperField}>{value}</span>
-      <CopyIcon
-        className={styles.clipboardWrapperIcon}
-        onClick={copyToClipoard}
-      />
+      <input className={styles.clipboardInput} readOnly value={value} />
+      <CopyIcon className={styles.clipboardIcon} onClick={copyToClipoard} />
     </div>
   )
 }

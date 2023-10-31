@@ -3,17 +3,21 @@ import { ComponentProps, forwardRef, ReactNode } from 'react'
 import styles from './styles.module.scss'
 
 interface ButtonProps extends ComponentProps<'button'> {
-  color?: 'primary' | 'red'
+  color?: 'primary' | 'secondary'
   children?: ReactNode
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, color, ...props }, ref) => {
+  ({ children, color, className, ...props }, ref) => {
     return (
       <button
-        className={classNames(styles.button, {
-          [styles.buttonRed]: color === 'red',
-        })}
+        className={classNames(
+          styles.button,
+          {
+            [styles.buttonSecondary]: color === 'secondary',
+          },
+          className
+        )}
         ref={ref}
         {...props}
       >

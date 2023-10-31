@@ -5,11 +5,7 @@ interface CopyIconProps extends ComponentProps<'svg'> {
   size?: number
 }
 
-const CopyIcon: FC<CopyIconProps> = ({
-  color = '#4d4d4d',
-  size = 28,
-  ...rest
-}) => {
+const CopyIcon: FC<CopyIconProps> = ({ size = 28, ...rest }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -23,13 +19,13 @@ const CopyIcon: FC<CopyIconProps> = ({
           <g id="File">
             <path
               fill="none"
-              stroke={color}
+              stroke="currentColor"
               strokeWidth="2"
               d="m28,10v18H10V10h18m0-2H10c-1.1,0-2,.9-2,2v18c0,1.1.9,2,2,2h18c1.1,0,2-.9,2-2V10c0-1.1-.9-2-2-2h0Z"
             />
             <path
               fill="none"
-              stroke={color}
+              stroke="currentColor"
               strokeWidth="2"
               d="m4,18h-2V4c0-1.1.9-2,2-2h14v2H4v14Z"
             />

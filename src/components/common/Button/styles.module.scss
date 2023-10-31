@@ -1,22 +1,27 @@
 .button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.5rem 1rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: $black-800;
+  background-color: $primary;
+  color: $primary-foreground;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s;
   &:hover {
-    border-color: $blue;
+    opacity: 0.9;
   }
   &:focus,
   &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+    outline: none;
+    box-shadow: rgb(9, 9, 11) 0px 0px 0px 2px,
+        rgb(212, 212, 216) 0px 0px 0px 4px,
+        rgba(0, 0, 0, 0) 0px 0px 0px 0px;
   }
-  &--red {
-    background-color: $red;
-    color: $black-800;
+  &--secondary {
+    background-color: $secondary;
+    color: $secondary-foreground;
+    border-color: $border;
   }
 }
